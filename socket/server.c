@@ -14,5 +14,22 @@
 
 int main(int argc, char** argv[])
 {
-  return 0;
+  int server_socket;
+  int clinet_socket;
+  int client_addr_size;
+  
+  struct sockaddr_in server_addr;
+  struct sockaddr_in client_addr;
+  
+  char buff_rcv[1024];
+  char abuff_snd[1024];
+  
+
+   server_socket  = socket( PF_INET, SOCK_STREAM, 0);
+   if( -1 == server_socket)
+   {
+      printf( "server socket 생성 실패\n");
+      exit( 1);
+   }
+  
 }
